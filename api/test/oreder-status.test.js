@@ -15,7 +15,10 @@ test("a new order cannot jump directly to shipped", () => {
   assert.equal(canTransition(ORDER_STATUS.READY, ORDER_STATUS.SHIPPED), true);
 });
 test("a new order cannot jump directly to shipped", () => {
-  assert.equal(canTransition(ORDER_STATUS.COMPLETED, ORDER_STATUS.PREPARING), false);
+  assert.equal(
+    canTransition(ORDER_STATUS.COMPLETED, ORDER_STATUS.PREPARING),
+    false
+  );
 });
 test("a new order cannot jump directly to shipped", () => {
   assert.equal(canTransition(ORDER_STATUS.unkown, ORDER_STATUS.READY), false);
