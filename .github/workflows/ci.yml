@@ -27,3 +27,11 @@ jobs:
 
       - name: Check Apps Script syntax
         run: node --check apps-script/Code.js
+
+      - name: Install API dependencies
+        working-directory: api
+        run: npm ci
+
+      - name: Check API syntax
+        working-directory: api
+        run: npm run check
