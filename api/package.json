@@ -4,9 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-      "start": "node src/server.js",
-      "dev": "node --watch src/server.js",
-      "check": "node --check src/server.js"
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js",
+    "check": "node --check src/server.js",
+    "test": "node --test"
   },
   "keywords": [],
   "author": "",
@@ -14,5 +15,8 @@
   "type": "module",
   "dependencies": {
     "express": "^5.3.0"
+  },
+  "devDependencies": {
+    "supertest": "^7.3.1"
   }
 }
