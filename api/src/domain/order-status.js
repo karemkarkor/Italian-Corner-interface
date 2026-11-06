@@ -15,7 +15,7 @@ const allowedTransitions = {
 
 export function canTransition(from, to) {
   const allowedNext = allowedTransitions[from];
-  if (!allowedNext) {
+  if (!Array.isArray(allowedNext)) {
     return false;
   }
   return allowedNext.includes(to);
