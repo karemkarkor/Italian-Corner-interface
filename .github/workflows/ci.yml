@@ -47,3 +47,34 @@ jobs:
       - name: Check API formatting
         working-directory: api
         run: npm run format:check
+
+  frontend:
+    name: Check frontend
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    defaults:
+      run:
+        working-directory: web
+
+    steps:
+      - name: Download repository
+        uses: actions/checkout@v7
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v7
+        with:
+          node-version: "24"
+          package-manager-cache: false
+
+      - name: Install frontend dependencies
+        run: npm ci
+
+      - name: Lint frontend
+        run: npm run lint
+
+      - name: Test frontend behavior
+        run: npm test
+
+      - name: Build frontend
+        run: npm run build

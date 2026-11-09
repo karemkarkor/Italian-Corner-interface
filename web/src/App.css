@@ -1,0 +1,567 @@
+.portal {
+  min-height: 100svh;
+  display: grid;
+  grid-template-columns: minmax(340px, 43%) minmax(0, 1fr);
+}
+.brand-panel {
+  background: #284535;
+  color: #f4f0e4;
+  padding: 42px clamp(30px, 4.2vw, 76px) 28px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  align-self: flex-start;
+}
+.brand-mark {
+  display: grid;
+  place-content: center;
+  width: 51px;
+  height: 51px;
+  border: 1px solid #69806b;
+  border-radius: 14px 14px 14px 2px;
+  font:
+    32px Georgia,
+    serif;
+  position: relative;
+}
+.brand-mark span {
+  color: #d69c6e;
+  position: absolute;
+  bottom: 7px;
+  right: 7px;
+}
+.brand-name {
+  display: block;
+  font:
+    25px Georgia,
+    serif;
+  letter-spacing: -0.7px;
+}
+.brand-caption {
+  display: block;
+  font-size: 10px;
+  margin-top: 6px;
+  color: #bcc9b7;
+  letter-spacing: 1.4px;
+}
+.brand-story {
+  margin-block: auto;
+  padding-block-start: 65px;
+  position: relative;
+}
+.eyebrow {
+  font-size: 10px;
+  font-weight: 650;
+  text-transform: uppercase;
+  letter-spacing: 2.2px;
+  color: #68725f;
+  line-height: 1.8;
+}
+.eyebrow.light {
+  color: #b5c4ab;
+  font-size: 9px;
+  letter-spacing: 1.6px;
+}
+.brand-story h1 {
+  font:
+    clamp(44px, 4.4vw, 69px)/1.08 Georgia,
+    "Times New Roman",
+    serif;
+  letter-spacing: -2.4px;
+  white-space: pre-line;
+  margin-block: 20px 23px;
+}
+.brand-story > p {
+  font-size: 14px;
+  line-height: 1.85;
+  color: #c4d0be;
+  max-width: 360px;
+}
+.parcel-art {
+  width: min(100%, 310px);
+  margin: 12px auto 4px;
+}
+.parcel-art svg {
+  width: 100%;
+  display: block;
+}
+.journey {
+  padding-block: 16px 28px;
+}
+.journey-label {
+  font-size: 11px;
+  color: #c4d0be;
+  margin-bottom: 20px;
+}
+.journey ol {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  gap: 12px;
+}
+.journey li {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 9px 3px;
+  font-size: 12px;
+  position: relative;
+}
+.journey-icon {
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #c4d0be;
+}
+.journey-icon::after {
+  content: "";
+  height: 1px;
+  background: #5a705a;
+  flex: 1;
+}
+.journey li:last-child .journey-icon::after {
+  background: transparent;
+}
+.step-number {
+  color: #b5c4ab;
+  font-size: 10px;
+  padding-inline-end: 12px;
+}
+.icon {
+  width: 22px;
+  height: 22px;
+  flex-shrink: 0;
+}
+.brand-footer {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  font-size: 10px;
+  color: #b5c4ab;
+  border-top: 1px solid #4b624c;
+  padding-top: 20px;
+}
+.tricolore {
+  width: 21px;
+  height: 4px;
+  background: linear-gradient(
+    to right,
+    #9cac85 33%,
+    #f2ebda 33%,
+    #f2ebda 67%,
+    #c48c6a 67%
+  );
+}
+.account-panel {
+  padding: 30px clamp(28px, 4vw, 70px) 24px;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+.utility-bar {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.utility-label {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  color: #71776d;
+  font-size: 11px;
+}
+.little-dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #8b9877;
+}
+.language-switch {
+  display: flex;
+  border: 1px solid #dfdfd4;
+  border-radius: 8px;
+  padding: 3px;
+  gap: 3px;
+}
+.language-switch button {
+  min-height: 33px;
+  min-width: 63px;
+  background: transparent;
+  color: #697161;
+  border: 0;
+  border-radius: 5px;
+  font-size: 12px;
+  padding: 5px 10px;
+}
+.language-switch button[aria-pressed="true"] {
+  color: #294634;
+  background: #e8ecdf;
+  font-weight: 600;
+}
+.language-switch button:hover {
+  background: #eff0e7;
+}
+.account-content {
+  flex: 1;
+  display: grid;
+  place-items: center;
+  padding-block: 64px;
+  outline: none;
+  min-width: 0;
+}
+.welcome-block {
+  width: 100%;
+  max-width: 400px;
+  animation: arrive 0.4s ease-out both;
+}
+.welcome-block h2 {
+  font:
+    38px/1.16 Georgia,
+    "Times New Roman",
+    serif;
+  letter-spacing: -1.2px;
+  margin-block: 14px;
+  text-wrap: balance;
+}
+.section-description {
+  font-size: 14px;
+  color: #73796f;
+  line-height: 1.8;
+}
+.sign-in-form {
+  margin-block-start: 30px;
+  min-height: 260px;
+}
+.clerk-root,
+.clerk-card-box {
+  width: 100% !important;
+  max-width: 100% !important;
+}
+.clerk-card-box {
+  box-shadow: none !important;
+  border: 1px solid #e2e4d9;
+  border-radius: 14px !important;
+  overflow: hidden;
+}
+.clerk-card {
+  box-shadow: none !important;
+  border-radius: 0 !important;
+  padding: 26px !important;
+}
+.clerk-submit {
+  min-height: 42px !important;
+  box-shadow: none !important;
+}
+.help-text {
+  margin-block-start: 25px;
+  font-size: 12px;
+  line-height: 1.8;
+  color: #777d72;
+  text-align: center;
+}
+.account-footer {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  color: #7a8175;
+  font-size: 10px;
+}
+.account-footer .icon {
+  width: 13px;
+  height: 13px;
+}
+.footer-brand {
+  margin-inline-start: auto;
+  font:
+    italic 15px Georgia,
+    serif;
+  color: #6f7869;
+}
+.loading-state {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  color: #68725f;
+  max-width: 340px;
+  line-height: 1.8;
+  font-size: 14px;
+}
+.spinner {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  border: 2px solid #dbe1d3;
+  border-top-color: #35563e;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+  flex-shrink: 0;
+}
+.identity-card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-block: 30px 17px;
+  padding: 20px;
+  border: 1px solid #dedfd3;
+  border-radius: 12px;
+  background: #fffdfa;
+}
+.identity-card > div:last-child {
+  min-width: 0;
+}
+.profile-button {
+  flex-shrink: 0;
+  min-width: 28px;
+}
+.field-label {
+  display: block;
+  color: #77806f;
+  font-size: 11px;
+  margin-bottom: 5px;
+}
+.employee-email {
+  font-size: 14px;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+.connection-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 20px;
+  border-radius: 12px;
+  background: #edf0e5;
+  border: 1px solid #dce3d1;
+}
+.connection-icon {
+  color: #4f714a;
+  padding-top: 2px;
+  display: flex;
+}
+.connection-card h3 {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.7;
+}
+.connection-card p {
+  font-size: 12px;
+  color: #66705e;
+  line-height: 1.8;
+  margin-top: 3px;
+}
+.connection-card.failed {
+  background: #fbefe7;
+  border-color: #ecd2bc;
+}
+.connection-card.failed .connection-icon {
+  color: #a75b36;
+}
+.secondary-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  border: 1px solid #ced5c6;
+  background: transparent;
+  border-radius: 8px;
+  min-height: 44px;
+  padding: 11px 16px;
+  margin-top: 18px;
+  color: #3e563d;
+  font-size: 12px;
+  transition: background 0.15s;
+}
+.secondary-button .icon {
+  width: 16px;
+  height: 16px;
+}
+.secondary-button:hover:not(:disabled) {
+  background: #e8ecdf;
+}
+.secondary-button:disabled {
+  opacity: 0.55;
+}
+.unavailable-icon {
+  width: 54px;
+  height: 54px;
+  display: grid;
+  place-items: center;
+  background: #e9eddf;
+  border-radius: 50%;
+  color: #5a704a;
+  margin-bottom: 24px;
+}
+.skip-link {
+  position: fixed;
+  inset-block-start: -100px;
+  inset-inline-start: 15px;
+  z-index: 100;
+  background: #fff;
+  color: #284535;
+  padding: 12px 18px;
+  border-radius: 5px;
+}
+.skip-link:focus {
+  inset-block-start: 15px;
+}
+[dir="rtl"] .brand-story h1 {
+  font-family: "Noto Sans Arabic", Tahoma, Arial, sans-serif;
+  font-size: clamp(40px, 3.8vw, 58px);
+  line-height: 1.5;
+  letter-spacing: 0;
+}
+[dir="rtl"] .welcome-block h2 {
+  font-family: "Noto Sans Arabic", Tahoma, Arial, sans-serif;
+  font-size: 31px;
+  line-height: 1.6;
+  letter-spacing: 0;
+}
+[dir="rtl"] .eyebrow,
+[dir="rtl"] .brand-caption {
+  letter-spacing: 0;
+}
+[dir="rtl"] .brand-caption {
+  text-align: left;
+}
+[dir="rtl"] .section-description,
+[dir="rtl"] .brand-story > p {
+  line-height: 2;
+}
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes arrive {
+  from {
+    opacity: 0;
+    transform: translateY(7px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@media (min-width: 1600px) {
+  .portal {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.3fr);
+  }
+  .brand-panel {
+    padding-inline: max(60px, calc((100vw - 1340px) / 2));
+  }
+}
+@media (max-width: 1000px) {
+  .brand-panel {
+    padding-inline: 28px;
+  }
+  .brand-story h1 {
+    font-size: 47px;
+  }
+  .utility-label {
+    display: none;
+  }
+  .utility-bar {
+    justify-content: flex-end;
+  }
+  .account-panel {
+    padding-inline: 28px;
+  }
+}
+@media (max-width: 720px) {
+  .portal {
+    display: flex;
+    flex-direction: column;
+  }
+  .brand-panel {
+    padding: 23px 24px 27px;
+  }
+  .brand-mark {
+    width: 40px;
+    height: 40px;
+    font-size: 27px;
+    border-radius: 11px 11px 11px 2px;
+  }
+  .brand-name {
+    font-size: 22px;
+  }
+  .brand-caption {
+    font-size: 9px;
+    margin-top: 4px;
+  }
+  .brand-story {
+    padding-block-start: 27px;
+  }
+  .brand-story .eyebrow,
+  .brand-story > p,
+  .parcel-art,
+  .journey,
+  .brand-footer {
+    display: none;
+  }
+  .brand-story h1 {
+    font-size: 37px;
+    letter-spacing: -1.1px;
+    line-height: 1.12;
+    margin: 0;
+  }
+  [dir="rtl"] .brand-story h1 {
+    font-size: 30px;
+    line-height: 1.5;
+  }
+  .account-panel {
+    padding: 18px 24px 25px;
+    flex: 1;
+  }
+  .utility-bar {
+    justify-content: space-between;
+  }
+  .utility-label {
+    display: flex;
+    font-size: 10px;
+  }
+  .account-content {
+    padding-block: 33px 45px;
+  }
+  .welcome-block h2 {
+    font-size: 33px;
+  }
+  [dir="rtl"] .welcome-block h2 {
+    font-size: 27px;
+  }
+  .section-description {
+    font-size: 13px;
+  }
+  .account-footer {
+    max-width: 400px;
+    width: 100%;
+    align-self: center;
+  }
+  .clerk-card {
+    padding: 20px !important;
+  }
+}
+@media (max-width: 370px) {
+  .utility-label {
+    max-width: 105px;
+    line-height: 1.6;
+  }
+  .account-panel {
+    padding-inline: 18px;
+  }
+  .footer-brand {
+    display: none;
+  }
+}

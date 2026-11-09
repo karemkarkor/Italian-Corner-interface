@@ -1,7 +1,12 @@
 import test from "node:test";
 import assert from "node:assert/strict";
 import request from "supertest";
-import app from "../src/app.js";
+import { createApp } from "../src/app.js";
+
+const app = createApp({
+  authenticate: (req, res, next) => next(),
+  readAuth: () => ({ isAuthenticated: false, userId: null }),
+});
 
 test("GET /api/health returns the API status", async () => {
   const response = await request(app)
